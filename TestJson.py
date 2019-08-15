@@ -33,7 +33,8 @@ def count_json_elements(file_name):
 
 
 def count_json_elements_bucket(bucket_name):    
-    print('-- Bucket:', bucket_name)
+    bucket_name_print = '== Bucket: ' + bucket_name + ' '
+    print(bucket_name_print.ljust(100, '='))
     bucket_objects = get_objects_s3(bucket_name)
     count = 0
     for bo in bucket_objects:
