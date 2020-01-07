@@ -1,0 +1,74 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+         {
+            "name": "Python: delete files [dev] [yb] [pb]",
+            "type": "python",
+            "request": "launch",
+            "args": [
+                "--bucket=adl-landing-bogota", 
+                "--init_path=events/dev",
+                "--year=2019",
+                "--month=10",
+                "--qty_months=3",
+                "--product=pb"
+            ],
+            "program": "${workspaceRoot}/delete_s3_files.py",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: delete files [dev] [yb] [pb]",
+            "type": "python",
+            "request": "launch",
+            "args": [
+                "--bucket=adl-landing-bogota", 
+                "--init_path=events/dev",
+                "--year=2019",
+                "--month=10",
+                "--qty_months=3",
+                "--product=pb"
+            ],
+            "program": "${workspaceRoot}/delete_s3_files.py",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: delete files [loc] [bb] [occiauto]",
+            "type": "python",
+            "request": "launch",
+            "args": [
+                "--bucket=adl-staging-test", 
+                "--init_path=test-Digital-Analytics/test-extraction-process/destination/bb/events/dev",
+                "--year=2019",
+                "--month=12",
+                "--product=occiauto"
+            ],
+            "program": "${workspaceRoot}/delete_s3_files.py",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: Archivo actual",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: delete files [prd] [gb] [salaryloans]",
+            "type": "python",
+            "request": "launch",
+            "args": [
+                "--bucket=adl-landing-popular", 
+                "--init_path=events/prd",
+                "--year=2019",
+                "--month=10",
+                "--qty_months=4",
+                "--product=salaryloans"
+            ],
+            "program": "${workspaceRoot}/delete_s3_files.py",
+            "console": "integratedTerminal"
+        }
+    ]
+}

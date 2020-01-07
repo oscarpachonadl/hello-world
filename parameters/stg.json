@@ -1,0 +1,18 @@
+{
+    "enviroment": "Stg",
+    "sourceBuckets": [
+        "rb-analytics-stg-tdc-bkt",
+        "rb-analytics-stg-pb-bkt",
+        "bb-analytics-stg-empresas-bkt",
+        "bb-analytics-stg-libreinversion-bkt",
+        "bb-analytics-stg-occiauto-bkt",
+        "bb-analytics-stg-pb-bkt",
+        "bb-analytics-stg-rpdigital-bkt",
+        "yb-analytics-stg-pb-bkt",
+        "gb-analytics-stg-pb-bkt",
+        "gb-analytics-stg-ahorro-bkt",
+        "gb-analytics-stg-tdc-bkt",
+        "adl-analytics-stg-habilitadora-bkt",
+        "fbog-analytics-stg-fic-bkt"
+    ]
+}

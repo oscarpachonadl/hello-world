@@ -1,7 +1,7 @@
 from configparser import ConfigParser
  
  
-def config(filename='database.ini', section='aurora_postgresql'):
+def config(filename='./db_ingest_test/database.ini', section='aurora_postgresql'):
     # create a parser
     parser = ConfigParser()
     # read config file

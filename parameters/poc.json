@@ -1,0 +1,10 @@
+{
+    "enviroment": "PoC",
+    "sourceBuckets": [
+        "adl-analytics-bb-occiauto", 
+        "adl-analytics-rb-pb", 
+        "adl-analytics-bb-pb", 
+        "adl-analytics-gb-pb", 
+        "adl-analytics-yb-pb"
+    ]
+}

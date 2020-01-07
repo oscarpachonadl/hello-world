@@ -2,7 +2,7 @@ import datetime
 import psycopg2
 
 import random
-from config import config
+from db_ingest_test.config import config
 
  
 def connect_test():
@@ -141,7 +141,7 @@ def data_insert_test_many(rows: int, commit_rows: int):
         Using executemany() command """
     conn = None
     list_rows = []
-    insert_command = "INSERT INTO test.data_ingest_test VALUES (%s)"
+    insert_command = "INSERT INTO test.data_ingest_test VALUES (%s, %s)"
     try:
         # read connection parameters
         params = config()
@@ -154,9 +154,9 @@ def data_insert_test_many(rows: int, commit_rows: int):
         
         for i in range(rows):
             random.seed(i)
-            random_number = random.random()*1000000
+            random_number = round(random.random()*1000000,0)
             # Create list with rows to insert
-            list_rows.append((str(random_number), "Hello world using executemany!!!"))
+            list_rows.append((random_number, 'Hello world using executemany!!!'))
 
             if not i % commit_rows or i == rows :
                 # execute a statement
@@ -173,12 +173,30 @@ def data_insert_test_many(rows: int, commit_rows: int):
         if conn is not None:
             conn.close()
             print('Database connection closed.')
- 
-if __name__ == '__main__':
-    # insert row by row
-    #data_insert_test(10000, 500)    
-
-    # insert gorupmany rows
-    data_insert_test_many(10000, 500)
 
     
+
+def data_copy(bucket_name: str, s3_object: str, table_name: str):
+    """ INCOMPLETE FUNCTION Connect to the PostgreSQL database and Copy data in table test.data_ingest_test
+        from s3 bucket """
+    conn = None
+    list_rows = []
+    insert_command = "INSERT INTO test.data_ingest_test VALUES (%s, %s)"
+    try:
+        # read connection parameters
+        params = config()
+ 
+        # connect to the PostgreSQL server
+        conn = psycopg2.connect(**params)
+      
+        # create a cursor
+        cur = conn.cursor()
+ 
+       # close the communication with the PostgreSQL
+        cur.close()
+    except (Exception, psycopg2.DatabaseError) as error:
+        print(error)
+    finally:
+        if conn is not None:
+            conn.close()
+            print('Database connection closed.')

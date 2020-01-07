@@ -1,0 +1,18 @@
+{
+    "enviroment": "Dev",
+    "sourceBuckets": [
+        "rb-analytics-dev-tdc-bkt",
+        "rb-analytics-dev-pb-bkt",
+        "bb-analytics-dev-empresas-bkt",
+        "bb-analytics-dev-libreinversion-bkt",
+        "bb-analytics-dev-occiauto-bkt",
+        "bb-analytics-dev-pb-bkt",
+        "bb-analytics-dev-rpdigital-bkt",
+        "yb-analytics-dev-pb-bkt",
+        "gb-analytics-dev-pb-bkt",
+        "gb-analytics-dev-ahorro-bkt",
+        "gb-analytics-dev-tdc-bkt",
+        "adl-analytics-dev-habilitadora-bkt",
+        "fbog-analytics-dev-fic-bkt"
+    ]
+}
